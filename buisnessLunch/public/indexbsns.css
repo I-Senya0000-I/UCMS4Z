@@ -1,0 +1,227 @@
+.div16 {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  letter-spacing: 0.05em;
+}
+.div12300 {
+  position: absolute;
+  top: 30px;
+  left: 1000px;
+  font-family: var(--font-bernier-distressed);
+  color: var(--color-mediumseagreen);
+  font-size: var(--font-size-21xl);
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  z-index: 1000;
+}
+.png-transparent-assorted-fuits-icon3 {
+  position: absolute;
+  top: 734.13px;
+  left: 40.6px;
+  width: 144.28px;
+  height: 99.87px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon4 {
+  position: absolute;
+  top: 737.25px;
+  left: 124.86px;
+  width: 59.54px;
+  height: 55.16px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon19 {
+  position: absolute;
+  top: 697.39px;
+  left: 29.04px;
+  width: 33.81px;
+  height: 33.81px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon20 {
+  position: absolute;
+  top: 686.45px;
+  left: 132.56px;
+  width: 27.65px;
+  height: 27.68px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon21,
+.istockphoto-489426066-170667a-icon22 {
+  position: absolute;
+  top: 560px;
+  left: 43.92px;
+  width: 36.72px;
+  height: 36.88px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon22 {
+  top: 791.16px;
+  left: 238.38px;
+}
+.png-transparent-assorted-fuits-icon5 {
+  position: absolute;
+  top: 601.58px;
+  left: 0;
+  width: 72.81px;
+  height: 136.71px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon6 {
+  position: absolute;
+  top: 651.07px;
+  left: 63.82px;
+  width: 58.77px;
+  height: 58.64px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon7 {
+  position: absolute;
+  top: 760px;
+  left: 0;
+  width: 54.98px;
+  height: 65.36px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon23 {
+  position: absolute;
+  top: 80.18px;
+  left: 1030.46px;
+  width: 32.74px;
+  height: 32.89px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon8 {
+  position: absolute;
+  top: 148.88px;
+  left: 941.52px;
+  width: 61.33px;
+  height: 70.53px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon9 {
+  position: absolute;
+  top: 267.17px;
+  left: 1131.62px;
+  width: 62.38px;
+  height: 72.07px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon24,
+.istockphoto-489426066-170667a-icon25 {
+  position: absolute;
+  top: 356.59px;
+  left: 1091.61px;
+  width: 36.93px;
+  height: 35.59px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon25 {
+  top: 0;
+  left: 1148px;
+  height: 22.59px;
+}
+.png-transparent-assorted-fuits-icon10 {
+  position: absolute;
+  top: 329.39px;
+  left: 1114.48px;
+  width: 79.52px;
+  height: 143.14px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon11 {
+  position: absolute;
+  top: 232.5px;
+  left: 1024.73px;
+  width: 72.05px;
+  height: 68.37px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon12 {
+  position: absolute;
+  top: 0px;
+  left: 1024.73px;
+  width: 72.05px;
+  height: 68.37px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon12 {
+  top: -10px;
+  left: 1035px;
+}
+.png-transparent-assorted-fuits-icon13 {
+  position: absolute;
+  top: 0;
+  left: 926.57px;
+  width: 64.76px;
+  height: 65.35px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon14 {
+  position: absolute;
+  top: 147.45px;
+  left: 1054.42px;
+  width: 64.25px;
+  height: 49.37px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon15 {
+  position: absolute;
+  top: 274.01px;
+  left: 950.89px;
+  width: 150.02px;
+  height: 111.63px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon16 {
+  position: absolute;
+  top: 165.91px;
+  left: 1085.42px;
+  width: 108.58px;
+  height: 162.99px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon26 {
+  position: absolute;
+  top: 196.34px;
+  left: 1002.22px;
+  width: 41.53px;
+  height: 41.53px;
+  object-fit: cover;
+}
+.istockphoto-489426066-170667a-icon27 {
+  position: absolute;
+  top: 150.79px;
+  left: 1130.64px;
+  width: 43.99px;
+  height: 44.33px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon18 {
+  position: absolute;
+  top: 42.76px;
+  left: 907px;
+  width: 170.01px;
+  height: 187.62px;
+  object-fit: cover;
+}
+.png-transparent-assorted-fuits-icon19 {
+  position: absolute;
+  top: 41.39px;
+  left: 1100.26px;
+  width: 122.74px;
+  height: 137.35px;
+  object-fit: cover;
+}
+.parent {
+  position: relative;
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 834px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 40px;
+  color: var(--color-mediumseagreen);
+  font-family: var(--font-bernier-distressed);
+}
