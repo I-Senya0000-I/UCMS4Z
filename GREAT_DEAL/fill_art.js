@@ -67,7 +67,7 @@ function fill_element(no, title, desc, cost, ref, comp, mass) {
                     '<span id="spx'+no+'" style="color:var(--color-white)">' + 0 + '₽</span>'+
                 '</div>'+
                 '<div onclick="add_to_cart('+ no +', '+ title +', '+ cost +')" style="height: 40px; width: 40px; background: #000000; bottom: 10px; left: 290px; position: absolute; border-radius: 10px; margin: auto; margin-bottom: 10px; text-align: center"><a style="position: absolute; top: 10px; left: 13px; color: #ffffff; font-family: \'Montserrat\', sans-serif;">k</a></div>'+
-                '<div onclick="goto('+ no +')" style="height: 40px; width: 40px; background: #000000; bottom: 10px; left: 340px; position: absolute; border-radius: 10px; margin: auto; margin-bottom: 10px; text-align: center"><a style="position: absolute; top: 10px; left: 13px; color: #ffffff; font-family: \'Montserrat\', sans-serif;">i+</a></div>'+
+                '<div onclick="viewInfoLabel(\''+title+'\',\''+desc+'\',\''+img_src+'\',\''+cost+'\',\''+mass+'\')" style="height: 40px; width: 40px; background: #000000; bottom: 10px; left: 340px; position: absolute; border-radius: 10px; margin: auto; margin-bottom: 10px; text-align: center"><a style="position: absolute; top: 10px; left: 13px; color: #ffffff; font-family: \'Montserrat\', sans-serif;">i+</a></div>'+
 
                 '</div>'+
             '</div>'+

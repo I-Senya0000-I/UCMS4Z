@@ -234,12 +234,33 @@ $(document).ready(function () {
         <div id="container" class="art_container" style="top: 100px; height: 1000px; width: 100%; position: relative; overflow-y: scroll;"></div>
         <div id="infoWindow" class="infoWindow">
             <div id="infoLabel" class="infoLabel">
-                <div style="height: 280px; width: 280px; left: 20px; background: #ffffff; position: relative; border-radius: 10px; top: 20px; text-align: center; overflow: hidden">
-                    <img src="" style="max-width:360px; max-height:280px; width: auto; height: auto;">
+
+
+                <div style="height: 280px; width: 280px; left: 20px; background: #ffffff; position: absolute; border-radius: 10px; top: 20px; text-align: center; overflow: hidden">
+                    <img src="" style="max-width:360px; max-height:280px; width: auto; height: auto;" id="dishImg">
                 </div>
-                <div class="dishName">Название</div>
-                <div class="dishDescription">Описание</div>
-                <div class="dishCost">0</div>
+                <div class="dishName", id="dishName">Название</div>
+                <div class="dishDescription", id="dishDescription">Описание</div>
+                <div class="dishCost", id="dishCost">0₽</div>
+                <div class="dishMass", id="dishMass">0</div>
+
+                <button style="position: absolute; width: 0px; height: 0px; background-color: var(--color-mediumasgreen); color: var(--color-mediumasgreen); top: 20px; right: 40px; border: none", id="closeIW" onclick="closeInfoLabel()">
+                    <img src="./menu+/public/closex.png" alt="" style="width: 25px; height: 25px; right: 10px; top: 10px; cursor: pointer;">
+                </button>
+                <div class="addButton">
+                    <button type="button" style="top: 10px;width: 30px; height: 0px;background-color: var(--color-gray-100); color: var(--color-gray-100); border: none" onclick="minusFromInfo()">
+                        <img src="./menu+/public/minus_button.png" alt="" style="position: relative;width: 45px; height: 45px; right: 3px; top: 9px; cursor: pointer;">
+                    </button>
+                    <span id="numC" style="display: inline-block; width: 70px; font-size: 37px; color:#1a1a1a; background-color:#ffffff; text-align: center">0</span>
+                    <button style="top: 10px;width: 28px; height: 0px;background-color: var(--color-gray-100); color: var(--color-gray-100); border: none" type="button" onclick="plusFromInfo()">
+                        <img src="./menu+/public/plus_button.png" alt="" style="position: relative;width: 45px; height: 45px; left: -20px; top: 9px; cursor: pointer;">
+                    </button>
+                    <span id="AddCostN" style="display: block; position: relative; left: 80px; width: 40px; font-size: 20px; color:#ffffff; text-align: center"></span>
+
+                </div>
+                <button class="addToCart" onclick="addToCart()">
+                    <div class="addToCartC">Добавить в корзину</div>
+                </button>
             </div>
         </div>
     </div>
@@ -247,5 +268,7 @@ $(document).ready(function () {
     <script src="/GREAT_DEAL/fill_art.js"></script>
     <script src="/GREAT_DEAL/jquery-3.7.1.min.js"></script>
     <script src="/GREAT_DEAL/dropdownSelect.js"></script>
+    <script src="/GREAT_DEAL/scripts.js"></script>
+
 </body>
 </html>

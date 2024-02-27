@@ -68,18 +68,23 @@
 }
 .dishName {
     position: absolute;
-    width: 660px;
-    left: 320px;
+    width: 600px;
+    left: 330px;
     top: 20px;
     text-align: center;
     font-size: var(--font-size-13xl);
     color: var(--color-mediumseagreen);
     font-family: var(--font-bernier-regular);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+    overflow: hidden;
 }
 .dishDescription {
     position: absolute;
-    width: 660px;
-    left: 320px;
+    width: 600px;
+    left: 330px;
     top: 70px;
     text-align: center;
     font-size: var(--font-size-xl);
@@ -88,16 +93,60 @@
     -webkit-box;
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
+
 }
 .dishCost {
     position: absolute;
-    width: 26\0px;
+    width: 150px;
     left: 40px;
     top: 320px;
     text-align: left;
     font-size: var(--font-size-17xl);
     color: var(--color-white);
-    font-family: var(--font-bernier-regular);
+    font-family: var(--font-inter);
+}
+.dishMass {
+    position: absolute;
+    width: 110px;
+    left: 210px;
+    top: 330px;
+    text-align: left;
+    font-size: var(--font-size-3xl);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+}
+.closeIW {
+
+}
+.addButton {
+    position: absolute;
+    width: 260px;
+    left: 390px;
+    top: 500px;
+    text-align: left;
+    font-size: var(--font-size-17xl);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+}
+.addToCart {
+    position: absolute;
+    width: 400px;
+    right: 40px;
+    bottom: 40px;
+    border-radius: 50px;
+
+}
+.addToCartC {
+
+    width: 390px;
+    height: 45px;
+    font-size: var(--font-size-13xl);
+    color: var(--color-gray-100);
+    font-family: var(--font-inter);
+    border-radius: 10px;
+    text-align: center;
+
+
 }
 /* selecionator */
 .selectionator {
