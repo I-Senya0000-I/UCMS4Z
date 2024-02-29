@@ -184,6 +184,7 @@ if first_start:
          "comp": "none",
          "mass": 10,
          "type": 1,
+
          },
         {"id": 0,
          "name": "test",

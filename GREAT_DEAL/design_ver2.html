@@ -258,12 +258,54 @@ $(document).ready(function () {
                     <span id="AddCostN" style="display: block; position: relative; left: 80px; width: 40px; font-size: 20px; color:#ffffff; text-align: center"></span>
 
                 </div>
-                <button class="addToCart" onclick="addToCart()">
+                <button class="addToCart" onclick="addToCart();">
                     <div class="addToCartC">Добавить в корзину</div>
                 </button>
             </div>
         </div>
     </div>
+
+    <div id="scIntCont" class="infoWindow">
+    <div class="scInterface", id="scinterface">
+        <button style="position: absolute; width: 0px; height: 0px; background-color: var(--color-mediumasgreen); color: var(--color-mediumasgreen); top: 10px; right: 29px; border: none", id="closeCSInterfaceButton" onclick="closeScInt();">
+          <img src="./menu+/public/closex.png" alt="" style="width: 25px; height: 25px; right: 10px; top: 10px; cursor: pointer;">
+        </button>
+        <button style="position: absolute; width: 232px; height: 55px; cursor: pointer; background-color: var(--color-mediumasgreen); color: var(--color-mediumasgreen); bottom: 20px; right: 53px; border: none" onclick="sendOrder()" id="endButton">
+          <img src="./menu+/public/end_choise.png" alt="" style="position: relative; width: 255px; height: 55px; top: 0px; left: 0px; cursor: pointer;">
+        </button>
+        <button style="position: absolute; width: 232px; height: 55px; cursor: pointer; background-color: var(--color-mediumasgreen); color: var(--color-mediumasgreen); top: 18px; left: 710px; border: none" onclick="cart_cnst=new Map(); cartUpd();" id="clearButton">
+          <img src="./menu+/public/clear_button.png" alt="" style="position: relative; width: 235px; height: 55px; top: 0px; left: 0px; cursor: pointer;">
+        </button>
+        <p style="color: white; font-size: var(--font-size-17xl); letter-spacing: 0.05em; font-family: var(--font-bernier-distressed); bottom: -13px; position: absolute; left: 20px; " ,="" id="ItSumLbl">Итого к оплате: 0 руб.</p>
+        <p style="color: white; font-size: var(--font-size-13xl); letter-spacing: 0.05em; font-family: var(--font-bernier-distressed); top: -6px; position: absolute; left: 20px; " ,="">Ваш заказ</p>
+
+        <div class="stcontainer">
+          <div id="column_separator" ,="" style="position: absolute; background-color:var(--color-mediumseagreen); width: 4px; height: 410px; top: 40px; left: 662px; color: var(--color-mediumasgreen)"></div>
+          <div id="column_separator-horizontal" ,="" style="position: absolute; background-color:var(--color-mediumseagreen); width: 954px; height: 4px; top: 40px; left: 22px; color: var(--color-mediumasgreen)"></div>
+          <div id="column_separator-horizontal1 " ,="" style="position: absolute; background-color:var(--color-mediumseagreen); width: 954px; height: 4px; top: 450px; left: 22px; color: var(--color-mediumasgreen)"></div>
+          <div class="scroll-table" style="top: 50px">
+	      <table>
+		    <thead>
+			  <tr>
+			  </tr>
+		    </thead>
+	      </table>
+          <div class="scroll-table-body">
+		    <table>
+			  <tbody id="table">
+
+              </tbody>
+		    </table>
+	      </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="fab0">
+        <button style="width: 0px; height: 0px; background-color: var(--color-gray-100); color: var(--color-gray-100); border: none", id="scbutton" onclick="openDcInt();">
+          <img src="./menu+/public/shopping-cart.png" alt="" style="width: 50px; height: 50px; background-color: var(--color-gray-100); right: 20px; cursor: pointer;">
+        </button>
+      </div>
 
     <script src="/GREAT_DEAL/fill_art.js"></script>
     <script src="/GREAT_DEAL/jquery-3.7.1.min.js"></script>

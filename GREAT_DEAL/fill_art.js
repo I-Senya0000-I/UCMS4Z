@@ -64,9 +64,9 @@ function fill_element(no, title, desc, cost, ref, comp, mass) {
                     '<button type="button" style="top: 10px;width: 30px; height: 0px;background-color: var(--color-gray-100); color: var(--color-gray-100); border: none" onclick="change_sp('+no+', -1,'+cost+')"><img src="./menu+/public/minus_button.png" alt="" style="position: relative;width: 24px; height: 24px; right: 0px; top: 5px; cursor: pointer;"></button>'+
                     '<span id="sp' + no + '" style="display: inline-block; width: 30px; font-size: 20px; color:#1a1a1a; background-color:#ffffff">' + 0 + ' </span>'+
                     '<button style="top: 10px;width: 28px; height: 0px;background-color: var(--color-gray-100); color: var(--color-gray-100); border: none" type="button" onclick="change_sp('+no+', +1,'+cost+')"><img src="./menu+/public/plus_button.png" alt="" style="position: relative;width: 24px; height: 24px; left: -6px; top: 5px; cursor: pointer;"></button>'+
-                    '<span id="spx'+no+'" style="color:var(--color-white)">' + 0 + '₽</span>'+
+                    '<span id="spx'+no+'" style="color:var(--color-white)"> ' + 0 + '₽</span>'+
                 '</div>'+
-                '<div onclick="add_to_cart('+ no +', '+ title +', '+ cost +')" style="height: 40px; width: 40px; background: #000000; bottom: 10px; left: 290px; position: absolute; border-radius: 10px; margin: auto; margin-bottom: 10px; text-align: center"><a style="position: absolute; top: 10px; left: 13px; color: #ffffff; font-family: \'Montserrat\', sans-serif;">k</a></div>'+
+                '<div onclick="AddToCart('+ no +', \''+ title +'\', '+ cost +')" style="height: 40px; width: 40px; background: #000000; bottom: 10px; left: 290px; position: absolute; border-radius: 10px; margin: auto; margin-bottom: 10px; text-align: center"><a style="position: absolute; top: 10px; left: 13px; color: #ffffff; font-family: \'Montserrat\', sans-serif;">k</a></div>'+
                 '<div onclick="viewInfoLabel(\''+title+'\',\''+desc+'\',\''+img_src+'\',\''+cost+'\',\''+mass+'\')" style="height: 40px; width: 40px; background: #000000; bottom: 10px; left: 340px; position: absolute; border-radius: 10px; margin: auto; margin-bottom: 10px; text-align: center"><a style="position: absolute; top: 10px; left: 13px; color: #ffffff; font-family: \'Montserrat\', sans-serif;">i+</a></div>'+
 
                 '</div>'+
@@ -75,10 +75,7 @@ function fill_element(no, title, desc, cost, ref, comp, mass) {
         c.innerHTML += h;
 }
 
-function goto(id){
 
-}
-let cart_cnst = [];
 function change_sp(id, value, cost){
     x = document.getElementById('sp'+id);
     r = parseInt(x.innerHTML) + value;
@@ -87,26 +84,6 @@ function change_sp(id, value, cost){
     t = document.getElementById('spx'+id);
     t.innerHTML ='  ' + parseInt(x.innerHTML)*cost + '₽';
 
-}
-
-function add_to_cart(id, title, cost){
-    x = document.getElementById('sp'+id);
-    r = parseInt(x.innerHTML) + value;
-    cart_cnst.push([no, title, r, cost]);
-    cart_update();
-
-}
-
-function info_label(no, title, desc, cost, ref, comp, mass){
-    
-}
-
-function cart_update(){
-    let table = document.getElementById("table");
-    let ItSum = document.getElementById("ItSumLbl");
-    table.innerHTML = "<tr>";
-    for (let i = 0; i < cart_cnst.length; i++){
-    }
 }
 
 
