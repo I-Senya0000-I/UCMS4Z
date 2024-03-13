@@ -282,7 +282,7 @@ $(document).ready(function () {
   });
   setTimeout(function(){
     $(".selectionator").addClass('opened');
-  }, 500);
+  }, 500);  
   setTimeout(function(){
     $(".selectionator").removeClass('opened');
   }, 1250);

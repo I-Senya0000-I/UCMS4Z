@@ -33,7 +33,6 @@ async def read_root(request: Request):
     }
     return templates.TemplateResponse("index.html", {"request": request, "data": data})
 #endregion
-
 #region --BUISNESSLUNCH--
 templatesBuisness = Jinja2Templates(directory="buisnessLunch")
 app.mount("/buisnessLunch/public", StaticFiles(directory="buisnessLunch/public"), name="buisnessLunch/public")
@@ -45,27 +44,6 @@ async def read_root(request: Request):
     }
     return templatesBuisness.TemplateResponse("index.html", {"request": request, "data": data})
 #endregion
-
-#region --MENU+--
-templatesMenu = Jinja2Templates(directory="menu+")
-app.mount("/menu+/public", StaticFiles(directory="menu+/public"), name="menu+/public")
-app.mount("/fonts", StaticFiles(directory="fonts"), name="fonts")
-@app.get("/menu", response_class=HTMLResponse)
-async def read_root(request: Request):
-    data = {
-        "page": "Menu+ page"
-    }
-    return templatesMenu.TemplateResponse("frame-2.html", {"request": request, "data": data})
-
-
-@app.get("/childMenu", response_class=HTMLResponse)
-async def read_root(request: Request):
-    data = {
-        "page": "Child Menu page"
-    }
-    return templatesMenu.TemplateResponse("index.html", {"request": request, "data": data})
-#endregion
-
 #region --QUERY METHODS--
 @app.get("/query")
 async def get_query():
@@ -102,9 +80,7 @@ async def test_con():
 async def table_number():
     return 909
 #endregion
-
-
-#region BIG DEAL
+#region MENU
 templatesAddon = Jinja2Templates(directory="GREAT_DEAL")
 app.mount("/GREAT_DEAL", StaticFiles(directory="GREAT_DEAL"), name="GREAT_DEAL")
 app.mount("/fonts", StaticFiles(directory="fonts"), name="fonts")
@@ -120,92 +96,48 @@ async def read_root(request: Request):
 
 
 app.mount("/food", StaticFiles(directory="food"), name="food")
-
+app.mount("/menu+/public", StaticFiles(directory="menu+/public"), name="menu+/public")
+app.mount("/fonts", StaticFiles(directory="fonts"), name="fonts")
 
 
 eda = [
         {"id": 0,
-         "name": "a" * 200,
-         "desc": "testfldksjhghjkagkhdfzjkgdzkjfg",
-         "cost": 100,
-         "mass": 10,
-         "img_path": "/food/images/default.jpg",
+         "name": "Картошка",
+         "desc": "Очень вкусная картошечка",
+         "cost": 71,
+         "mass": 345,
+         "img_path": "/food/images/1.jpg",
+         "comp": "none",
+         "type": 18,
+         },
+        {"id": 1,
+         "name": "Котлета",
+         "desc": "Очень вкусная котлетка",
+         "cost": 54,
+         "mass": 789,
+         "img_path": "/food/images/2.jpg",
          "comp": "none",
          "type": 0,
          },
-        {"id": 1,
-         "name": "test",
-         "desc": "test",
-         "cost": 200,
-         "img_path": "/food/images/default.jpg",
+        {"id": 2,
+         "name": "Картошка с котлетой",
+         "desc": "Очень вкусная картошкеча с котлеткой",
+         "cost": 5002,
+         "mass": 1002,
+         "img_path": "/food/images/3.jpg",
          "comp": "none",
-         "mass": 10,
-         "type": 1,
+         "type": 17,
          },
-        {"id": 0,
-         "name": "test",
-         "desc": "test",
-         "cost": 300,
-         "img_path": "/food/images/default.jpg",
-         "comp": "none",
-         "mass": 10,
-         "type": 1,
-         },
-        {"id": 0,
-         "name": "test",
-         "desc": "test",
-         "cost": 300,
-         "img_path": "/food/images/default.jpg",
-         "comp": "none",
-         "mass": 10,
-         "type": 2,
-         }
-    ]
+    ] # Меню при первом запуске
 
 with open('first_start.pck', 'rb') as f:
     first_start = pickle.load(f)
 if first_start:
+    #import os
+    #os.remove("DISHES.db")
     print('UPDATING DATABASE')
-    eda = [
-        {"id": 0,
-         "name": "a" * 200,
-         "desc": "testfldksjhghjkagkhdfzjkgdzkjfg",
-         "cost": 100,
-         "mass": 10,
-         "img_path": "/food/images/default.jpg",
-         "comp": "none",
-         "type": 0,
-         },
-        {"id": 1,
-         "name": "test",
-         "desc": "test",
-         "cost": 200,
-         "img_path": "/food/images/default.jpg",
-         "comp": "none",
-         "mass": 10,
-         "type": 1,
-
-         },
-        {"id": 0,
-         "name": "test",
-         "desc": "test",
-         "cost": 300,
-         "img_path": "/food/images/default.jpg",
-         "comp": "none",
-         "mass": 10,
-         "type": 1,
-         },
-        {"id": 0,
-         "name": "test",
-         "desc": "test",
-         "cost": 300,
-         "img_path": "/food/images/default.jpg",
-         "comp": "none",
-         "mass": 10,
-         "type": 2,
-         }
-    ]
     for i in eda:
+        print(i)
         fdb.add_dish(i['name'], i['desc'], i['cost'], i['mass'], i['img_path'], i['type'], i['comp'])
     with open('first_start.pck', 'wb') as f:
         pickle.dump(False, f)
@@ -215,7 +147,7 @@ if first_start:
 
 @app.get('/get_food', response_class=HTMLResponse)
 async def get_food(request: Request):
-    #return get_dishes(str(list(range(21))))
+    return get_dishes(json.dumps(list(range(21))))
     return json.dumps(eda)
 
 
@@ -238,8 +170,6 @@ def change_dish(id, name, desc, cost, mass, img, type, comp):
 def delete_dish(id):
     return fdb.delete_dish(id)
 #endregion
-
-
 debug = True
 if __name__ == '__main__':
     if debug:

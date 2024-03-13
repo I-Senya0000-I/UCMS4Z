@@ -25,7 +25,7 @@ console.log(cart_cnst);
 
 function cMenuFill() {
     var http = new XMLHttpRequest();
-    var url = "/get_food";
+    var url = "/get_dishes";
     http.onreadystatechange = function() {
         if (http.readyState == XMLHttpRequest.DONE) {
             x = JSON.parse(http.responseText);
@@ -35,7 +35,10 @@ function cMenuFill() {
             }
         }
     }
-    http.open("GET", url, true);
+    r = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    var params = "?types=" + JSON.stringify(r);
+    console.log(params);
+    http.open("POST", url+params, true);
     http.send(null);
 }
 cMenuFill();
@@ -52,7 +55,7 @@ function findByName(name) {
 function showFromCart(name) {
     x = findByName(name);
     console.log(x);
-    viewInfoLabel(x["name"], x["desc"], x["img_path"], x["cost"], x["mass"]);
+    viewInfoLabel(x["name"], x["desc"], x["img"], x["cost"], x["mass"]);
     cartUpd();
 }
 function plusFromInfo(){
