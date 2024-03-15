@@ -55,7 +55,7 @@ function findByName(name) {
 function showFromCart(name) {
     x = findByName(name);
     console.log(x);
-    viewInfoLabel(x["name"], x["desc"], x["img"], x["cost"], x["mass"]);
+    viewInfoLabel(x["name"], x["desc"], x["imgФ"], x["cost"], x["mass"]);
     cartUpd();
 }
 function plusFromInfo(){

@@ -170,7 +170,7 @@ def change_dish(id, name, desc, cost, mass, img, type, comp):
 def delete_dish(id):
     return fdb.delete_dish(id)
 #endregion
-debug = True
+debug = False
 if __name__ == '__main__':
     if debug:
         uvicorn.run("main:app", port=8000, reload=True, access_log=False)
